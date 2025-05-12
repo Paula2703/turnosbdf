@@ -139,13 +139,18 @@ input{
 /* Ajuste en móviles para evitar que los meses sean demasiado pequeños */
 @media screen and (max-width: 900px) {
     #calendario {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+        grid-template-columns: repeat(3, 1fr); /* 2 columnas en pantallas medianas */
     }
 }
 
 @media screen and (max-width: 600px) {
     #calendario {
         grid-template-columns: repeat(2, 1fr); /* 1 columna en móviles */
+    }
+
+@media screen and (max-width: 300px) {
+    #calendario {
+        grid-template-columns: repeat(1, 1fr); /* 1 columna en móviles */
     }
 }
 
