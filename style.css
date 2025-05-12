@@ -115,21 +115,24 @@ input{
 }
 
 #calendario {
-    display: flex;
-    flex-wrap: wrap; /* Permitir que los meses se acomoden automáticamente */
-    justify-content: center; /* Centrar los meses */
-    gap: 10px;
-    overflow-x: auto; /* Permitir scroll horizontal en móviles */
-    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 meses por fila en pantallas grandes */
+    gap: 15px;
+    justify-content: center;
 }
 
-/* Ajustar el tamaño de los meses */
-.mes {
-    flex: 1 1 calc(33.333% - 10px); /* Permitir que 3 meses se alineen por fila */
-    min-width: 100px; /* Tamaño mínimo para pantallas pequeñas */
-    max-width: 400px; /* Tamaño máximo para pantallas grandes */
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+/* Ajuste para pantallas medianas */
+@media screen and (max-width: 900px) {
+    #calendario {
+        grid-template-columns: repeat(2, 1fr); /* 2 meses por fila en pantallas medianas */
+    }
 }
+
+/* **Ajuste para móviles** */
+@media screen and (max-width: 600px) {
+    #calendario {
+        grid-template-columns: repeat(1, 1fr); /* 1 mes por fila en móviles */
+    }
+}
+
 
