@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Turnos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gestión de Turnos</h1>
+    
+    <div>
+        <label for="turno">Turno:</label>
+        <select id="turno">
+            <option value="mañana">Mañana</option>
+            <option value="tarde">Tarde</option>
+            <option value="noche">Noche</option>
+            <option value="guardia">Guardia</option>
+            <option value="libre">Libre</option>
+        </select>
+        
+        <label for="fechaInicio">Fecha de Inicio:</label>
+        <input type="date" id="fechaInicio">
+        
+        <label for="fechaFin">Fecha de Fin:</label>
+        <input type="date" id="fechaFin">
+
+        <label for="duracionTurno">Duración del turno (en días):</label>
+        <input type="number" id="duracionTurno" value="1" min="1">
+
+        <label for="periodicidad">Repetir cada X días (Opcional):</label>
+        <input type="number" id="periodicidad" placeholder="Ejemplo: 5">
+        
+        <button onclick="guardarTurno()">Agregar Turno</button>
+        <button onclick="limpiarCalendario()">Limpiar Calendario</button>
+        <button onclick="deshacerUltimoMovimiento()">Deshacer cambio</button>
+    </div>
+
+    <h2>Calendario de Turnos</h2>
+    <div id="calendario"></div>
+
+        
+
+
+    <script src="script.js"></script>
+</body>
+</html>
