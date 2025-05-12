@@ -4,6 +4,21 @@ body {
     text-align: center;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: auto; /* Permitir desplazamiento horizontal si es necesario */
+}
+
+#calendario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
 h1 {
     color: #0c902f;
     font-size: 50px;
