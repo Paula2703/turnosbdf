@@ -118,8 +118,20 @@ input{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 meses por fila en pantallas grandes */
     gap: 15px;
-    justify-content: center;
+    justify-content: center; /* Centra los meses en la página */
+    align-items: center;
+    margin: 0 auto; /* Centra el calendario horizontalmente */
 }
+
+@media screen and (max-width: 600px) {
+    #calendario {
+        grid-template-columns: repeat(1, 1fr); /* 1 mes por fila */
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 
 /* Ajuste para pantallas medianas */
 @media screen and (max-width: 900px) {
