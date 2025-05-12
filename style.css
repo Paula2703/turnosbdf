@@ -126,7 +126,7 @@ input{
 /* Ajustar el tamaño de los meses */
 .mes {
     flex: 1 1 calc(33.333% - 10px); /* Permitir que 3 meses se alineen por fila */
-    min-width: 250px; /* Tamaño mínimo para pantallas pequeñas */
+    min-width: 100px; /* Tamaño mínimo para pantallas pequeñas */
     max-width: 400px; /* Tamaño máximo para pantallas grandes */
     padding: 15px;
     border-radius: 10px;
