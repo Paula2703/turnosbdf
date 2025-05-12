@@ -4,21 +4,6 @@ body {
     text-align: center;
 }
 
-html, body {
-    width: 100%;
-    overflow-x: auto; /* Permitir desplazamiento horizontal si es necesario */
-}
-
-#calendario {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-
 h1 {
     color: #0c902f;
     font-size: 50px;
@@ -136,26 +121,15 @@ input{
     justify-content: center;
 }
 
-@media screen and (max-width: 600px) {
-    .mes {
-        max-width: 300px; /* Reducir tamaño en pantallas pequeñas */
-        padding: 10px;
-    }
-
-    .fila-dias, .contenedor-dias {
-        gap: 2px; /* Espaciado más compacto */
-    }
-
-    .dia {
-        font-size: 12px; /* Reducir el tamaño de los días */
-        padding: 6px;
-    }
-
 /* Ajuste en móviles para evitar que los meses sean demasiado pequeños */
 @media screen and (max-width: 900px) {
     #calendario {
-        grid-template-columns: repeat(3, 1fr); /* 2 columnas en pantallas medianas */
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
     }
 }
 
-
+@media screen and (max-width: 600px) {
+    #calendario {
+        grid-template-columns: repeat(2, 1fr); /* 1 columna en móviles */
+    }
+}
